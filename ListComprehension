@@ -1,0 +1,110 @@
+#DOUBLE
+nums = [4, 8, 15, 16, 23, 42]
+double_nums = [num*2 for num in nums]
+print(double_nums)
+
+#SQUARES (using range() function)
+nums = range(11)
+squares = [num**2 for num in nums]
+print(squares)
+
+#ADDING
+nums = [4, 8, 15, 16, 23, 42]
+add_ten = [num + 10 for num in nums]
+print(add_ten)
+
+#DIVIDING
+nums = [4, 8, 15, 16, 23, 42]
+divide_by_two = [num/2.0 for num in nums]
+print(divide_by_two)
+
+#MODULO
+nums = [4, 8, 15, 16, 23, 42]
+parity = [num%2 for num in nums]
+print(parity)
+
+#ADDING STRING TO LIST ITEM
+names = ["Elaine", "George", "Jerry", "Cosmo"]
+greetings = ["Hello, " + name for name in names]
+print(greetings)
+#Also to print each item on new line:
+for i in greetings:
+  print(i)
+
+#EXTRACTING CHARACTER BY INDEX
+names = ["Elaine", "George", "Jerry", "Cosmo"]
+first_character = [let[0] for let in names]
+print(first_character)
+
+#LENGTH OF STRINGS IN LIST
+names = ["Elaine", "George", "Jerry", "Cosmo"]
+lengths = [len(name) for name in names]
+print(lengths)
+
+#OPPOSITE
+booleans = [True, False, True]
+opposite = [not boolean for boolean in booleans]
+print(opposite)
+
+#COMPARING STRINGS
+names = ["Elaine", "George", "Jerry", "Cosmo"]
+is_Jerry = [name == "Jerry" for name in names]
+print(is_Jerry)
+
+#GREATER THAN 
+'''
+(<: less than; 
+<=: less than or equal to;
+>: greater than;
+>=: greater than or equal to
+#==: equal to
+!=: not equal to)
+'''
+nums = [5, -10, 40, 20, 0]
+greater_than_two =[i > 2 for i in nums ]
+print(greater_than_two)
+
+#MULTIPLICATION
+nested_lists = [[4, 8], [15, 16], [23, 42]]
+product = [e1 * e2 for (e1, e2) in nested_lists]
+print(product)
+
+#COMPARING SUB-LISTS
+nested_lists = [[4, 8], [16, 15], [23, 42]]
+greater_than = [e1 > e2 for (e1,e2) in nested_lists]
+print(greater_than)
+
+#EXTRACTING A SUB-LIST ITEM
+nested_lists = [[4, 8], [16, 15], [23, 42]]
+first_only =[e1 for (e1, e2) in nested_lists]
+print(first_only)
+
+#COMBINING (ZIPPING) LISTS - ADDING ITEMS
+a = [1.0, 2.0, 3.0]
+b = [4.0, 5.0, 6.0]
+sums = [item1 + item2 for (item1, item2) in zip(a, b)]
+print(sums)
+
+#COMBINING (ZIPPING) LISTS - DIVIDING ITEMS
+a = [1.0, 2.0, 3.0]
+b = [4.0, 5.0, 6.0]
+quotients =[item2 / item1 for (item1, item2) in zip(a, b)]
+print(quotients)
+
+#COMBINING (ZIPPING) LISTS - COMBINING STRINGS
+capitals = ["Santiago", "Paris", "Copenhagen"]
+countries = ["Chile", "France", "Denmark"]
+locations = [capital + ", " + country for (capital, country) in zip(capitals, countries)]
+print(locations)
+
+#COMBINING (ZIPPING) LISTS - COMBINING STRINGS WITH NUMBERS
+names = ["Jon", "Arya", "Ned"]
+ages = [14, 9, 35]
+users = ["Name: " + str(name) + ", Age: " + str(age) for (name, age) in zip(names, ages)]
+print(users)
+
+#COMBINING (ZIPPING) LISTS - COMPARING NUMBERS
+a = [30, 42, 10]
+b = [15, 16, 17]
+greater_than = [ia > ib for (ia, ib) in zip(a,b)]
+print(greater_than)
